@@ -1,38 +1,38 @@
+function Message(props){
+  return(
+    <>
+      <div className={`message ${props.type}-message`}>
+          <div className="message-content">
+            {props.content}
+          </div>
+        </div>
+    </>
+  )
+}
+
 export default function Home() {
   return (
     <main className="chat-container">
+      
       <div className="chat-messages">
-        {/* Chat message 1 */}
-        <div className="message user-message">
-          <div className="message-content">
-            Hello! Can you help me understand React Router v7?
-          </div>
-        </div>
-
-        <div className="message bot-message">
-          <div className="message-content">
-            Of course! React Router v7 is the latest version that introduces
-            several improvements including better data loading, enhanced nested
-            routing, and improved TypeScript support. What specific aspect would
-            you like to learn about?
-          </div>
-        </div>
+      <Message 
+      type="user" 
+      content=" Hello! Can you help me understand React Router v7?"
+      />
+      <Message 
+      type="bot" 
+      content="Of course! React Router v7 is the latest version that introduces several improvements including better data loading, enhanced nested routing, and improved TypeScript support. What specific aspect would you like to learn about?"
+       />
 
         {/* Chat message 2 */}
-        <div className="message user-message">
-          <div className="message-content">
-            How do nested routes work in v7?
-          </div>
-        </div>
-
-        <div className="message bot-message">
-          <div className="message-content">
-            Nested routes in React Router v7 allow you to create hierarchical UI
-            structures. You define parent routes that contain child routes, and
-            use the `&lt;Outlet /&gt;` component to render child components. The
-            parent route acts as a layout component that wraps its children.
-          </div>
-        </div>
+        <Message 
+        type="user"
+        content="How do nested routes work in v7?"
+        />
+         <Message 
+        type="bot"
+        content="Nested routes in React Router v7 allow you to create hierarchical UI structures. You define parent routes that contain child routes, and use the `&lt;Outlet /&gt;` component to render child components. The parent route acts as a layout component that wraps its children."
+        />
 
         {/* Chat message 3 */}
         <div className="message user-message">
