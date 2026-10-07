@@ -29,13 +29,9 @@ function SidebarFooter(){
   )
 }
 
-//Funktion med sidebar, der beskriver indhold//
-function Sidebar(){
+function ChatThreadList(){
   return(
-     <aside className="sidebar">
-       <SidebarHeader />
-        {/* Chat threads list */}
-        <nav className="chat-threads-list" aria-label="Chat threads">
+     <nav className="chat-threads-list" aria-label="Chat threads">
           <ul>
             <li className="chat-thread-item">
               <a
@@ -130,6 +126,16 @@ function Sidebar(){
             </li>
           </ul>
         </nav>
+  )
+}
+
+//Funktion med sidebar, der beskriver indhold//
+function Sidebar(){
+  return(
+     <aside className="sidebar">
+       <SidebarHeader />
+        {/* Chat threads list */}
+        <ChatThreadList />
         {/* Sidebar footer */}
         <SidebarFooter />
       </aside>
